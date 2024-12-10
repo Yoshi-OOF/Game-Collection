@@ -7,8 +7,7 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
-// Exemple de nom d'utilisateur, à remplacer par vos données dynamiques
-$username = "Guillaume";
+$username = $_SESSION['username'];
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +43,7 @@ $username = "Guillaume";
                         <p><?php echo $jeu['description']; ?></p>
                     </div>
                 <?php endforeach; ?>
-                
+
             </div>
         </section>
     </main>
