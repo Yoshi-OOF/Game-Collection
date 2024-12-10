@@ -1,5 +1,5 @@
 <?php
-class AccueilController {
+class BibliotequeController {
     private $model;
 
     public function __construct($model) {
@@ -8,7 +8,7 @@ class AccueilController {
 
     public function afficher_jeux() {
         $jeux = $this->model->get_jeux();
-        include 'Views/AccueilView.php';
+        include 'Views/BibliotequeView.php';
     }
 }
 ?>
