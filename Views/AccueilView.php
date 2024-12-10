@@ -17,7 +17,7 @@ $username = "Guillaume";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - Game Collection</title>
-    <link rel="stylesheet" href="../Css/styles.css">
+    <link rel="stylesheet" href="../Css/Accueil.css">
 </head>
 <body>
     <header class="header">
@@ -70,7 +70,7 @@ $username = "Guillaume";
     </main>
     
     <footer>
-        <p>Game Collection - 2023 - Tous droits réservés</p>
+        <p>Game Collection - 2025 - Tous droits réservés</p>
     </footer>
 </body>
 </html>
