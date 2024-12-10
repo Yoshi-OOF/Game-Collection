@@ -10,7 +10,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['register'])) {
 
     $registerModel = new RegisterModel();
 
-    // Validation des champs
     if (empty($nom) || empty($prenom) || empty($email) || empty($password) || empty($confirmPassword)) {
         echo "Tous les champs doivent être remplis.";
         exit;
@@ -26,13 +25,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['register'])) {
         exit;
     }
 
-    // Vérification de l'existence de l'email
     if ($registerModel->emailExists($email)) {
         echo "L'adresse email est déjà utilisée.";
         exit;
     }
 
-    // Enregistrement de l'utilisateur
     $success = $registerModel->registerUser($nom, $prenom, $email, $password);
 
     if ($success) {
