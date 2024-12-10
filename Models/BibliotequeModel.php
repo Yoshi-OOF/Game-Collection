@@ -1,7 +1,7 @@
 <?php
 include_once '../Classes/DataConstructor.php';
 
-class LoginModel {
+class BibliotequeModel {
     private $data;
 
     public function __construct() {
