@@ -1,32 +1,26 @@
 <?php
 include_once '../Models/LoginModel.php';
 
-class LoginController {
-    private $model;
+function login() {
+    $model = new LoginModel(); 
 
-    public function __construct($model) {
-        $this->model = $model;
-    }
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $email = $_POST['email'] ?? '';
+        $password = $_POST['password'] ?? '';
 
-    public function login() {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $email = $_POST['email'] ?? '';
-            $password = $_POST['password'] ?? '';
+        $user = $model->authenticate($email, $password);
 
-            $user = $this->model->authenticate($email, $password);
-
-            if ($user) {
-                session_start();
-                $_SESSION['user'] = $user;
-                header('Location: dashboard.php'); // Redirection après login
-                exit;
-            } else {
-                $error = "Email ou mot de passe incorrect.";
-                include 'Views/LoginView.php'; // Recharge la vue avec un message d'erreur
-            }
+        if ($user) {
+            session_start();
+            $_SESSION['user'] = $user;
+            header('Location: Biblioteque.php'); 
+            exit;
         } else {
-            include 'Views/LoginView.php'; // Affiche la vue initiale
+            $error = "Email ou mot de passe incorrect.";
+            include 'Views/LoginView.php'; 
         }
+    } else {
+        include 'Views/LoginView.php';
     }
 }
 ?>
