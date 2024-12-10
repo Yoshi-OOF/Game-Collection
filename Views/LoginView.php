@@ -14,9 +14,9 @@
         <?php endif; ?>
         <form method="POST" action="">
             <label for="email">Email :</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
             <label for="password">Mot de passe :</label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" name="password" placeholder="Password" required>
             <button type="submit">Se connecter</button>
         </form>
         <div style="text-align: center; margin-top: 10px;">
