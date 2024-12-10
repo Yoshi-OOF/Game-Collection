@@ -28,7 +28,7 @@ class RegisterModel {
         $params = [':email' => $email];
         $result = $this->data->query($query, $params);
 
-        return !empty($result); // True if email already exists
+        return !empty($result);
     }
 }
 ?>
