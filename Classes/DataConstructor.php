@@ -7,3 +7,4 @@ $username = 'root';
 $password = '';
 
 $data = new Data($host, $dbname, $username, $password);
+?>
