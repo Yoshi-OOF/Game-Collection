@@ -1,0 +1,17 @@
+{
+    "name": "andre/game-collection",
+    "autoload": {
+        "psr-4": {
+            "Andre\\GameCollection\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Yoshi",
+            "email": "andreolienzo@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
