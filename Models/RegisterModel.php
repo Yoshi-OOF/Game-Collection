@@ -19,8 +19,8 @@ class RegisterModel {
             ':email' => $email,
             ':password' => $hashedPassword
         ];
-
-        return $this->data->query($query, $params);
+    
+        return $this->data->execute($query, $params);
     }
 
     public function emailExists($email) {
