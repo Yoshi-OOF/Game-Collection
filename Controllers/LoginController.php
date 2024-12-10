@@ -1,4 +1,6 @@
 <?php
+include_once '../Models/LoginModel.php';
+
 class LoginController {
     private $model;
 
