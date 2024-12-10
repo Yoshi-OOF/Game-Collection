@@ -34,30 +34,16 @@ $username = "Guillaume";
         <section class="games">
             <h2>Mes jeux</h2>
             <div class="game-list">
-                <div class="game-card">
-                    <img src="../Assets/red-dead-1.jpg" alt="Red Dead Redemption">
-                    <div class="game-info">
-                        <h3>Read dead redemption</h3>
-                        <p>PlayStation</p>
-                        <p>0h</p>
+                <?php foreach ($jeux as $jeu): ?>
+                    <div class="game">
+                        <img 
+                            src="../Assets/img/<?php echo htmlspecialchars($jeu['titre']); ?>.jpg" 
+                            alt="<?php echo htmlspecialchars($jeu['titre']); ?>" 
+                        >
+                        <h3><?php echo $jeu['nom']; ?></h3>
+                        <p><?php echo $jeu['description']; ?></p>
                     </div>
-                </div>
-                <div class="game-card">
-                    <img src="../Assets/red-dead-2.jpg" alt="Red Dead Redemption 2">
-                    <div class="game-info">
-                        <h3>Read dead redemption 2</h3>
-                        <p>PlayStation</p>
-                        <p>10h</p>
-                    </div>
-                </div>
-                <div class="game-card">
-                    <img src="../Assets/zelda.jpg" alt="Zelda BOTW">
-                    <div class="game-info">
-                        <h3>Zelda BOTW</h3>
-                        <p>Nintendo</p>
-                        <p>0h</p>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </section>
     </main>
