@@ -1,14 +1,14 @@
 <?php
-// Démarrer la session pour vérifier si l'utilisateur est connecté
 session_start();
 
 // Vérifie si l'utilisateur est connecté
 if (!isset($_SESSION['user_id'])) {
-    // Si non connecté, redirige vers la page de connexion
     header("Location: LoginView.php");
     exit();
 }
 
+// Exemple de nom d'utilisateur, à remplacer par vos données dynamiques
+$username = "Guillaume";
 ?>
 
 <!DOCTYPE html>
@@ -17,27 +17,60 @@ if (!isset($_SESSION['user_id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - Game Collection</title>
-    <link rel="stylesheet" href="../Css/accueil.css">
+    <link rel="stylesheet" href="../Css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Bienvenue sur Game Collection</h1>
-        <nav>
+    <header class="header">
+        <div class="logo">Logo</div>
+        <nav class="nav">
             <ul>
-                <li><a href="accueil.php">Accueil</a></li>
-                <li><a href="profile.php">Mon Profil</a></li>
-                <li><a href="logout.php">Déconnexion</a></li>
+                <li><a href="accueil.php">Ma Bibliothèque</a></li>
+                <li><a href="addGame.php">Ajouter un Jeu</a></li>
+                <li><a href="classement.php">Classement</a></li>
+                <li><a href="profile.php">Profil</a></li>
             </ul>
         </nav>
     </header>
+    
     <main>
-        <section>
-            <h2>Vos jeux préférés</h2>
-            <p>Explorez votre collection de jeux et ajoutez-en de nouveaux !</p>
+        <section class="hero">
+            <h1>SALUT <?php echo strtoupper($username); ?> !</h1>
+            <p>PRÊT À AJOUTER DES JEUX À TA COLLECTION ?</p>
+        </section>
+        
+        <section class="games">
+            <h2>Mes jeux</h2>
+            <div class="game-list">
+                <div class="game-card">
+                    <img src="../Assets/red-dead-1.jpg" alt="Red Dead Redemption">
+                    <div class="game-info">
+                        <h3>Read dead redemption</h3>
+                        <p>PlayStation</p>
+                        <p>0h</p>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="../Assets/red-dead-2.jpg" alt="Red Dead Redemption 2">
+                    <div class="game-info">
+                        <h3>Read dead redemption 2</h3>
+                        <p>PlayStation</p>
+                        <p>10h</p>
+                    </div>
+                </div>
+                <div class="game-card">
+                    <img src="../Assets/zelda.jpg" alt="Zelda BOTW">
+                    <div class="game-info">
+                        <h3>Zelda BOTW</h3>
+                        <p>Nintendo</p>
+                        <p>0h</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
+    
     <footer>
-        <p>&copy; 2024 Game Collection. Tous droits réservés.</p>
+        <p>Game Collection - 2023 - Tous droits réservés</p>
     </footer>
 </body>
 </html>
