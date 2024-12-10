@@ -39,16 +39,17 @@ body {
     color: #f39c12;
 }
 
-/* Hero Section */
 .hero {
     text-align: center;
     padding: 50px 20px;
-    background-image: url('../Assets/background.jpg');
+    background-image: url('../Assets/img/bg_zelda.jpg'); 
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
+
 
 .hero h1 {
     font-size: 2.5rem;

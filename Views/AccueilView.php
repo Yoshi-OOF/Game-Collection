@@ -44,6 +44,7 @@ $username = "Guillaume";
                         <p><?php echo $jeu['description']; ?></p>
                     </div>
                 <?php endforeach; ?>
+                
             </div>
         </section>
     </main>
