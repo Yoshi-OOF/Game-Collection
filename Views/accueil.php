@@ -17,7 +17,7 @@ if (!isset($_SESSION['user_id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - Game Collection</title>
-    <link rel="stylesheet" href="../Assets/styles.css"> <!-- Lien vers une feuille de style (facultatif) -->
+    <link rel="stylesheet" href="../Assets/styles.css">
 </head>
 <body>
     <header>
