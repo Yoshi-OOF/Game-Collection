@@ -10,13 +10,15 @@ class LoginModel {
     }
 
     public function authenticate($email, $password) {
-        $query = "SELECT * FROM users WHERE email = :email";
+        $query = "SELECT * FROM compte WHERE email_compte = :email";
         $params = [':email' => $email];
         $result = $this->data->query($query, $params);
-        $user = $result ? $result[0] : null;
 
-        if ($user && password_verify($password, $user['password'])) {
-            return $user;
+        if ($result) {
+            $id_compte = $result[0];
+            if (password_verify($password, $id_compte['password_compte'])) {
+                return $id_compte;
+            }
         }
         return false;
     }

@@ -10,7 +10,7 @@ class BibliotequeModel {
     }
 
     public function get_jeux() {
-        $query = "SELECT * FROM jeux";
+        $query = "SELECT * FROM jeu";
         $result = $this->data->query($query);
         return $result;
     }
