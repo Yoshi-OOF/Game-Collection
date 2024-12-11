@@ -15,6 +15,7 @@ CREATE TABLE COMPTE(
 CREATE TABLE JEU(
    id_jeu INT,
    nom_jeu VARCHAR(128),
+   desc_jeu VARCHAR(2560),
    editeur_jeu VARCHAR(128),
    url_site_jeu VARCHAR(128),
    url_couverture_jeu VARCHAR(128),
