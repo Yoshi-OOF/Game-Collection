@@ -9,6 +9,8 @@ function login() {
         $password = $_POST['password'] ?? '';
 
         $user = $model->authenticate($email, $password);
+        
+        dd($user);
 
         if ($user) {
             session_start();

@@ -19,8 +19,9 @@
             <input type="password" id="password" name="password" placeholder="Password" required>
             <button type="submit">Se connecter</button>
         </form>
+        
         <div style="text-align: center; margin-top: 10px;">
-            <a href="register.php" style="color: #6a5acd; text-decoration: none;">S'inscrire</a>
+            <a href="Register.php" style="color: #6a5acd; text-decoration: none;">S'inscrire</a>
         </div>
     </div>
 </body>
