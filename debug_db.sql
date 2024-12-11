@@ -49,10 +49,10 @@ CREATE TABLE COMPATIBLE(
 
 
 INSERT INTO COMPTE VALUES
-    (1, "tangi", "Beneat", "tangi.nom@gmail.com", "$2y$10$PVo5Mm5hvKnolSlal0K9CelwcsYaQIDi4mSmy16VmecMLbUTQM5Aq"),
-    (2, "maxime", "Jousse", "maxime.nom@gmail.com", "$2y$10$PVo5Mm5hvKnolSlal0K9CelwcsYaQIDi4mSmy16VmecMLbUTQM5Aq"),
-    (3, "nithael", "Bonnaud", "nithael.nom@gmail.com", "$2y$10$PVo5Mm5hvKnolSlal0K9CelwcsYaQIDi4mSmy16VmecMLbUTQM5Aq"),
-    (4, "enzo", "Andreoli", "enzo.nom@gmail.com", "$2y$10$PVo5Mm5hvKnolSlal0K9CelwcsYaQIDi4mSmy16VmecMLbUTQM5Aq");
+    (1, "Beneat", "Tangi", "tangi.nom@gmail.com", "$2y$10$PVo5Mm5hvKnolSlal0K9CelwcsYaQIDi4mSmy16VmecMLbUTQM5Aq"),
+    (2, "Jousse", "Maxime", "maxime.nom@gmail.com", "$2y$10$PVo5Mm5hvKnolSlal0K9CelwcsYaQIDi4mSmy16VmecMLbUTQM5Aq"),
+    (3, "Bonnaud", "Nithael", "nithael.nom@gmail.com", "$2y$10$PVo5Mm5hvKnolSlal0K9CelwcsYaQIDi4mSmy16VmecMLbUTQM5Aq"),
+    (4, "Andreoli", "Enzo", "enzo.nom@gmail.com", "$2y$10$PVo5Mm5hvKnolSlal0K9CelwcsYaQIDi4mSmy16VmecMLbUTQM5Aq");
 
 INSERT INTO JEU VALUES
     (1, "GTA V", "Rockstar Games", "un bon vieux jeu de plus de 10 ans.", "https://www.rockstargames.com/fr/gta-v", "https://m.media-amazon.com/images/I/71P3UUlwBdL._AC_UF1000,1000_QL80_.jpg", "2024-10-12"),

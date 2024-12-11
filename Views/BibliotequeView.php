@@ -1,12 +1,14 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
-if (!isset($_SESSION['id_compte'])) {
+if (!isset($_SESSION['compte'])) {
     header("Location: ../Views/LoginView.php");
     exit();
 }
 
-$username = $_SESSION['username'];
+$username = $_SESSION['compte']['nom_compte'];
 ?>
 
 <!DOCTYPE html>
@@ -19,14 +21,13 @@ $username = $_SESSION['username'];
 </head>
 <body>
     <header class="header">
-        <div class="logo">Logo</div>
-        @include('Views/Navigation.php')
+        <?php include('NavigationView.php'); ?>
     </header>
     
     <main>
         <section class="hero">
             <h1>SALUT <?php echo strtoupper($username); ?> !</h1>
-            <p>PRÊT À AJOUTER DES JEUX À TA COLLECTION ?</p>
+            <p>PR&Ecirc;T &Agrave; AJOUTER DES JEUX &Agrave; TA COLLECTION ?</p>
         </section>
         
         <section class="games">
@@ -35,20 +36,18 @@ $username = $_SESSION['username'];
                 <?php foreach ($jeux as $jeu): ?>
                     <div class="game">
                         <img 
-                            src="../Assets/img/<?php echo htmlspecialchars($jeu['titre']); ?>.jpg" 
-                            alt="<?php echo htmlspecialchars($jeu['titre']); ?>" 
-                        >
-                        <h3><?php echo $jeu['nom']; ?></h3>
-                        <p><?php echo $jeu['description']; ?></p>
+                            src="<?php echo htmlspecialchars($jeu['url_couverture_jeu']); ?>" 
+                            alt="<?php echo htmlspecialchars($jeu['titre']); ?>">
+                        <h3><?php echo htmlspecialchars($jeu['nom_jeu']); ?></h3>
+                        <p><?php echo htmlspecialchars($jeu['description_jeu']); ?></p>
                     </div>
                 <?php endforeach; ?>
-
             </div>
         </section>
     </main>
     
     <footer>
-        <p>Game Collection - 2025 - Tous droits réservés</p>
+        <p>Game Collection - 2025 - Tous droits r&eacute;serv&eacute;s</p>
     </footer>
 </body>
 </html>
