@@ -1,9 +1,8 @@
 <?php
 session_start();
 
-// Vérifie si l'utilisateur est connecté
-if (!isset($_SESSION['user_id'])) {
-    header("Location: LoginView.php");
+if (!isset($_SESSION['id_compte'])) {
+    header("Location: ../Views/LoginView.php");
     exit();
 }
 
