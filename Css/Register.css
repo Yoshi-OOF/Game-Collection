@@ -56,18 +56,17 @@ form input[type="password"]:focus {
 
 /* Bouton */
 form button {
-    background-color: #50fa7b;
-    color: #282a36;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
     width: 100%;
+    padding: 10px;
+    background-color: #6a5acd;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 form button:hover {
-    background-color: #45e06f;
+    background-color: #5848a4;
 }
 
 .form-container a {
