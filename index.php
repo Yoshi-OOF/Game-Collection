@@ -40,6 +40,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         case 'login':
             include __DIR__ . '/Controllers/LoginController.php';
             break;
+        case 'registerController':
+            include __DIR__ . '/Controllers/RegisterController.php';
+            break;
         default:
             include __DIR__ . '/Controllers/LoginController.php'; // Default login
             break;
@@ -56,9 +59,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 break;
             case 'ajouterJeu':
                 include __DIR__ . '/Controllers/AjouterJeuController.php';
-                break;
-            case 'registerController':
-                include __DIR__ . '/Controllers/RegisterController.php';
                 break;
             default:
                 include __DIR__ . '/Controllers/BibliothequeController.php'; // Default Bibliotheque
