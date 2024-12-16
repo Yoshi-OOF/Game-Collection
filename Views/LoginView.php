@@ -24,6 +24,8 @@
             <input type="password" id="password" name="password" placeholder="Mot de passe" required>
             <button type="submit">Se connecter</button>
         </form>
+
+        <a href="RegisterView.php">S'inscrire</a>
     </div>
 </body>
 </html>
