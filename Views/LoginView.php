@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion - Game Collection</title>
-    <link rel="stylesheet" href="../Css/Login.css">
+    <link rel="stylesheet" href="/Game-Collection/Css/Login.css">
 </head>
 <body>
     <div class="login-container">
@@ -17,7 +17,7 @@
             </div>
         <?php endif; ?>
 
-        <form method="POST" action="../Controllers/LoginController.php">
+        <form method="POST" action="index.php?action=login">
             <label for="email">Email :</label>
             <input type="email" id="email" name="email" placeholder="Email" required>
             <label for="password">Mot de passe :</label>
@@ -25,7 +25,7 @@
             <button type="submit">Se connecter</button>
         </form>
 
-        <a href="RegisterView.php">S'inscrire</a>
+        <a href="index.php?action=register">S'inscrire</a>
     </div>
 </body>
 </html>

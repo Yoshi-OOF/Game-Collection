@@ -1,5 +1,4 @@
 <?php
-include_once '../Classes/DataConstructor.php';
 
 class LoginModel {
     private $data;

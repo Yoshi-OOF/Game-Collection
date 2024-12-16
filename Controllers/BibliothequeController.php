@@ -1,12 +1,23 @@
 <?php
-require_once '../Models/BibliothequeModel.php';
 
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
+include_once __DIR__ . '/../Classes/Data.php';
+
+if (!isset($_SESSION['compte'])) {
+    header("Location: index.php?action=login");
+    exit();
 }
 
-$model = new BibliothequeModel();
+$host = 'localhost';
+$dbname = 'gamecollection';
+$username = 'root';
+$password = '';
+
+$data = new Data($host, $dbname, $username, $password);
+
+$model = new BibliothequeModel($data);
 $jeux = $model->get_jeux($_SESSION['compte']);
-include '../Views/BibliothequeView.php';
+
+$username = $_SESSION['compte']['nom_compte'];
+include __DIR__ . '/../Views/BibliothequeView.php';
 
 ?>
