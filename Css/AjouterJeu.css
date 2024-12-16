@@ -8,27 +8,34 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
-
 header {
+    background-color: #1E1B26;
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #141428;
+    padding: 15px 50px;
 }
 
 header img {
-    height: 40px;
-}
-
-header nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 15px;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
-header nav a:hover {
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav a:hover {
     text-decoration: underline;
 }
 
@@ -36,8 +43,8 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 20px;
+    align-items: left;
+    padding-left: 200px;
 }
 
 h2 {
@@ -48,13 +55,13 @@ h2 {
 form {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     width: 100%;
     max-width: 400px;
 }
 
-form input[type="text"] {
-    width: 100%;
+form input {
+    width: auto;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #44475a;
@@ -63,20 +70,33 @@ form input[type="text"] {
     color: #f8f8f2;
     font-size: 14px;
 }
+form textarea {
+    width: auto;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #44475a;
+    border-radius: 5px;
+    background-color: #44475a;
+    color: #f8f8f2;
+    font-size: 14px;
+}
+.checkbox-group {
+    align-items: left;
+}
 
 form button {
-    background-color: #50fa7b;
-    color: #282a36;
+    background-color: #6a5acd;
+    color: #FFFFFF;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    width: 100%;
+    width: 50%;
 }
 
 form button:hover {
-    background-color: #45e06f;
+    background-color: #5848a4;
 }
 
 footer {
