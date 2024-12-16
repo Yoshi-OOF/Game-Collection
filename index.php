@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 } else {
     // GET requests
-    if (isset($_SESSION['compte'])) {
+    if (isset($_SESSION['id_compte'])) {
         switch ($action) {
             case 'bibliotheque':
                 include __DIR__ . '/Controllers/BibliothequeController.php';

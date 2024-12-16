@@ -2,7 +2,7 @@
 
 include_once __DIR__ . '/../Classes/Data.php';
 
-if (!isset($_SESSION['compte'])) {
+if (!isset($_SESSION['id_compte'])) {
     header("Location: index.php?action=login");
     exit();
 }
@@ -15,9 +15,9 @@ $password = '';
 $data = new Data($host, $dbname, $username, $password);
 
 $model = new BibliothequeModel($data);
-$jeux = $model->get_jeux($_SESSION['compte']);
+$jeux = $model->get_jeux($_SESSION['id_compte']);
 
-$username = $_SESSION['compte']['prenom_compte'];
+$username = $_SESSION['id_compte']['prenom_compte'];
 include __DIR__ . '/../Views/BibliothequeView.php';
 
 ?>
