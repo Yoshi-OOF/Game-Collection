@@ -8,7 +8,7 @@ require 'vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-require 'db.php';
+// require 'db.php';
 
 if (isset($_SESSION['user_id'])) {
     header("Location: Views/accueil.php");
