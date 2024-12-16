@@ -1,4 +1,4 @@
-<nav class="nav">
+<nav>
     <ul>
         <img src="../Assets/img/logo" alt="logo" >
         <li><a href="index.php?action=bibliotheque">Ma Bibliothèque</a></li>

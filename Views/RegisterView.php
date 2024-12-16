@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
-    <link rel="stylesheet" href="../Css/Register.css">
+    <link rel="stylesheet" href="/Game-Collection/Css/Register.css">
 </head>
 <body>
     <div class="form-container">
         <h1>Inscription</h1>
-        <form action="../Controllers/RegisterController.php" method="POST">
+        <form action="index.php?action=register" method="POST">
             <label for="nom">Nom :</label>
             <input type="text" name="nom" id="nom" required>
             <label for="prenom">Prénom :</label>
@@ -22,7 +22,7 @@
             <input type="password" name="confirmPassword" id="confirmPassword" required>
             <button type="submit" name="register">S'inscrire</button>
         </form>
-        <a href="LoginView.php">Se connecter</a>
+        <a href="index.php?action=login">Se connecter</a>
     </div>
 </body>
 </html>

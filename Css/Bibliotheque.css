@@ -6,13 +6,39 @@ body {
     color: #fff;
 }
 
-.header {
+/* HEADER */
+header {
+    background-color: #1E1B26;
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #1f1f2e;
+    padding: 15px 50px;
 }
+
+header img {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Fin header */
 
 .nav ul {
     display: flex;

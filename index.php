@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     } else {
         if ($action === 'register') {
-            include __DIR__ . '/Controllers/RegisterController.php';
+            include __DIR__ . '/Views/RegisterView.php';
         } else {
             include __DIR__ . '/Views/LoginView.php';
         }
