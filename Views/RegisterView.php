@@ -22,7 +22,7 @@
             <input type="password" name="confirmPassword" id="confirmPassword" required>
             <button type="submit" name="register">S'inscrire</button>
         </form>
-        <a href="LoginView.php">Se connecter</a>
+        <button type ="submit" a href="LoginView.php">Se connecter</button>
     </div>
 </body>
 </html>
