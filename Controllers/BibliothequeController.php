@@ -7,6 +7,6 @@ if (session_status() === PHP_SESSION_NONE) {
 
 $model = new BibliothequeModel();
 $jeux = $model->get_jeux($_SESSION['compte']);
-include '../Views/BibliotequeView.php';
+include '../Views/BibliothequeView.php';
 
 ?>
