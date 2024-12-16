@@ -1,6 +1,7 @@
 {
     "name": "andre/game-collection",
     "license": "MIT",
+    "description": "Game collection",
     "autoload": {
         "psr-4": {
             "Andre\\GameCollection\\": "src/"
