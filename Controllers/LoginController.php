@@ -15,11 +15,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'] ?? '';
     $password = $_POST['password'] ?? '';
 
-    $user = $model->authenticate($email, $password);
+    $id_compte = $model->authenticate($email, $password);
 
-    if ($user) {
+    if ($id_compte) {
         session_start();
-        $_SESSION['compte'] = $user;
+        $_SESSION['id_compte'] = $id_compte;
         header("Location: index.php?action=bibliotheque");
         exit();
     } else {

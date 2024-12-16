@@ -18,11 +18,7 @@ class RegisterModel {
             ':password' => $hashedPassword
         ];
 
-        var_dump($params);
-
-        $result = $data->execute($query, $params);
-        
-        var_dump($result);
+        $result = $this->data->execute($query, $params);
 
         if ($result) {
             return true;
