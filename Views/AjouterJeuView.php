@@ -3,30 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Css/AjouterJeu.css">
     <title>Ajouter un jeu</title>
+    <link rel="stylesheet" href="/Game-Collection/Css/AjouterJeu.css">
 </head>
 <body>
-    <header>
-        <img src="../Assets/img/logo.png" alt="Logo du site">
-        <?php include "NavigationView.php"; ?>
+    <header class="header">
+        <?php include __DIR__ . '/NavigationView.php'; ?>
     </header>
+    <main>
+        <h1>Ajouter un jeu à sa bibliothèque</h1>
+        <p>Le jeu que vous souhaitez ajouter n'existe pas ! Vous pouvez le créer, celui-ci sera automatiquement ajouté à votre bibliothèque !</p>
+        <form method="POST" action="index.php?action=bibliotheque">
+            <label for="nom">Nom du jeu</label>
+            <input type="text" id="nom" placeholder="Nom du jeu">
 
-    <!-- Recherche -->
-    <h2>Ajouter un jeu a sa bibliothèque</h2>
-    <form action="" method="post">
-        <input type="text" placeholder="Recherche un jeu">
-        <button type="submit">rechercher</button>
-    </form>
+            <label for="editeur">Éditeur du jeu</label>
+            <input type="text" id="editeur" placeholder="Éditeur du jeu">
 
-    <h2>Mes jeux</h2>
+            <label for="sortie">Sortie du jeu</label>
+            <input type="date" id="sortie">
 
-    <?php foreach ($jeux as $jeu):?>
+            <label>Plateformes</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox"> Playstation</label>
+                <label><input type="checkbox"> Xbox</label>
+                <label><input type="checkbox"> Nintendo</label>
+                <label><input type="checkbox"> PC</label>
+            </div>
 
+            <label for="description">Description du jeu</label>
+            <textarea id="description" placeholder="Description du jeu"></textarea>
 
-    <?php endforeach; ?>
+            <label for="cover">URL de la cover</label>
+            <input type="text" id="cover" placeholder="URL de la cover">
 
-    
-    <footer>Game collection - 2023 - Tous droits réservés</footer>
+            <label for="site">URL du site</label>
+            <input type="text" id="site" placeholder="URL du site">
+
+            <button type="submit">AJOUTER LE JEU</button>
+        </form>
+    </main>
 </body>
 </html>

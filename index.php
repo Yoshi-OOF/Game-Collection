@@ -54,7 +54,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             case 'logout':
                 include __DIR__ . '/Controllers/LogoutController.php';
                 break;
-
+            case 'ajouterJeu':
+                include __DIR__ . '/Controllers/AjouterJeuController.php';
+                break;
             default:
                 include __DIR__ . '/Controllers/BibliothequeController.php'; // Default Bibliotheque
                 break;

@@ -1,11 +1,9 @@
-<!-- Views/BibliothequeView.php -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - Game Collection</title>
-    <!-- Use absolute path for CSS -->
     <link rel="stylesheet" href="/Game-Collection/Css/Bibliotheque.css">
 </head>
 <body>
