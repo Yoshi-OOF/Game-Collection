@@ -3,8 +3,7 @@
 class LoginModel {
     private $data;
 
-    public function __construct() {
-        global $data;
+    public function __construct($data) {
         $this->data = $data;
     }
 
@@ -22,4 +21,5 @@ class LoginModel {
         return false;
     }
 }
+
 ?>

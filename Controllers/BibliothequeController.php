@@ -17,7 +17,7 @@ $data = new Data($host, $dbname, $username, $password);
 $model = new BibliothequeModel($data);
 $jeux = $model->get_jeux($_SESSION['compte']);
 
-$username = $_SESSION['compte']['nom_compte'];
+$username = $_SESSION['compte']['prenom_compte'];
 include __DIR__ . '/../Views/BibliothequeView.php';
 
 ?>

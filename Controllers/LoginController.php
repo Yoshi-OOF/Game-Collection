@@ -1,23 +1,34 @@
 <?php
-$error = '';
+include_once __DIR__ . '/../Classes/Data.php';
+include_once __DIR__ . '/../Models/LoginModel.php';
+
+
+$host = 'localhost';
+$dbname = 'gamecollection';
+$username = 'root';
+$password = '';
+
+$data = new Data($host, $dbname, $username, $password);
+
+$model = new LoginModel($data);
+echo "LoginController inclus<br>";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $model = new LoginModel();
+    echo "LoginController inclus<br>";
+    
+    $email = $_POST['email'] ?? '';
+    $password = $_POST['password'] ?? '';
 
-    $email = trim($_POST['email'] ?? '');
-    $password = trim($_POST['password'] ?? '');
+    $user = $model->authenticate($email, $password);
 
-    $compte = $model->authenticate($email, $password);
-
-    if ($compte) {
-        $_SESSION['compte'] = $compte;
-
-        header('Location: index.php');
+    if ($user) {
+        session_start();
+        $_SESSION['compte'] = $user;
+        header("Location: index.php?action=bibliotheque");
         exit();
     } else {
-        $error = "Identifiants invalides. Veuillez réessayer.";
+        echo "Identifiants incorrects.";
     }
 }
 
-include __DIR__ . '/../Views/LoginView.php';
 ?>

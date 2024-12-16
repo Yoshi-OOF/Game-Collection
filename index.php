@@ -31,6 +31,7 @@ spl_autoload_register(function ($class_name) {
     }
 });
 
+
 $action = $_GET['action'] ?? '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -53,12 +54,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             case 'logout':
                 include __DIR__ . '/Controllers/LogoutController.php';
                 break;
+
             default:
                 include __DIR__ . '/Controllers/BibliothequeController.php'; // Default Bibliotheque
                 break;
         }
     } else {
-        include __DIR__ . '/Controllers/LoginController.php';
+        if ($action === 'register') {
+            include __DIR__ . '/Controllers/RegisterController.php';
+        } else {
+            include __DIR__ . '/Views/LoginView.php';
+        }
     }
 }
 ?>
