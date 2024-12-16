@@ -57,6 +57,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             case 'ajouterJeu':
                 include __DIR__ . '/Controllers/AjouterJeuController.php';
                 break;
+            case 'registerController':
+                include __DIR__ . '/Controllers/RegisterController.php';
+                break;
             default:
                 include __DIR__ . '/Controllers/BibliothequeController.php'; // Default Bibliotheque
                 break;

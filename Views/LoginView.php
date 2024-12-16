@@ -24,7 +24,7 @@
             <input type="password" id="password" name="password" placeholder="Mot de passe" required>
             <button type="submit">Se connecter</button>
         </form>
-
+            
         <a href="index.php?action=register">S'inscrire</a>
     </div>
 </body>

@@ -1,17 +1,15 @@
 <?php
-include_once '../Classes/DataConstructor.php';
 
 class RegisterModel {
     private $data;
 
-    public function __construct() {
-        global $data;
+    public function __construct($data) {
         $this->data = $data;
     }
 
     public function registerUser($nom, $prenom, $email, $password) {
         $query = "INSERT INTO compte (nom_compte, prenom_compte, email_compte, password_compte) 
-                  VALUES (:nom, :prenom, :email, :password)";
+                VALUES (:nom, :prenom, :email, :password)";
         $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
         $params = [
             ':nom' => $nom,
@@ -19,8 +17,18 @@ class RegisterModel {
             ':email' => $email,
             ':password' => $hashedPassword
         ];
-    
-        return $this->data->execute($query, $params);
+
+        var_dump($params);
+
+        $result = $data->execute($query, $params);
+        
+        var_dump($result);
+
+        if ($result) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public function emailExists($email) {
