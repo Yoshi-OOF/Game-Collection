@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['compte'] = $compte;
 
         // Redirection après connexion réussie
-        header('Location: BibliotequeController.php');
+        header('Location: BibliothequeController.php');
         exit;
     }
 }
