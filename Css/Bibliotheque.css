@@ -78,6 +78,9 @@ nav a:hover {
 
 .device {
     background-color: #1E1B26;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 
@@ -94,6 +97,7 @@ nav a:hover {
 .device p {
     color: grey;
     font-size: 20px;
+
 }
 
 .game-display a {
