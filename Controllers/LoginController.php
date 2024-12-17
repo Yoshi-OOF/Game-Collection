@@ -1,14 +1,15 @@
 <?php
 include_once __DIR__ . '/../Classes/Data.php';
+include_once __DIR__ . '/../Classes/DataConstructor.php';
 
-$host = 'localhost';
+/* $host = 'localhost';
 $dbname = 'gamecollection';
 $username = 'root';
 $password = '';
 
-$data = new Data($host, $dbname, $username, $password);
+$data = new Data($host, $dbname, $username, $password); */
 
-$model = new LoginModel($data);
+$model = new LoginModel($pdo);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
