@@ -28,7 +28,7 @@
                 <div class="game-display">
 
                     <?php foreach ($jeux as $jeu): ?>
-                        <a href="#">
+                        <a href="index.php?action=modifierJeu">
                             <div class="game-card">
                                 <img src="<?php echo htmlspecialchars($jeu['url_couverture_jeu']); ?>" alt="RDR">
 
@@ -36,8 +36,10 @@
                                     <p><?php echo $jeu["nom_jeu"]; ?></p>
                                     <p><?php echo $jeu["temps_jeu"]; ?> h</p>
                                 </div>
-                                <div class="device">
-                                    <p><?php echo $jeu["nom_plateforme"]; ?></p>
+                                <div class="device" style="display: flex; gap: 10px;">
+                                    <?php foreach ($jeux_par_plateforme[$jeu['id_jeu']] as $platforme): ?>
+                                        <p><?php echo $platforme['nom_plateforme']; ?></p>
+                                    <?php endforeach; ?>
                                 </div>
                             </div>
                         </a>
@@ -47,7 +49,7 @@
         <?php else: ?>
             <div class="error-no-games">
                 <h2>Vous n'avez enregistré aucun jeu pour le moment.</h2>
-                <a href="#">Ajouter un jeu</a>
+                <a href="index.php?action=ajouterJeu">Ajouter un Jeu</a>
             </div>
         <?php endif; ?>
     </section>

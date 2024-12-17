@@ -17,7 +17,7 @@ class BibliothequeModel {
         return $this->data->query($query, $params);
     }
 
-    public function get_platforms($id_jeu){
+    public function get_platformes($id_jeu){
         $query = "SELECT nom_plateforme FROM Plateforme
                     INNER JOIN Compatible ON Plateforme.id_plateforme = Compatible.id_plateforme
                     WHERE Compatible.id_jeu = :id_jeu";
