@@ -8,7 +8,7 @@ class RegisterModel {
     }
 
     public function registerUser($nom, $prenom, $email, $password) {
-        $query = "INSERT INTO compte (nom_compte, prenom_compte, email_compte, password_compte) 
+        $query = "INSERT INTO COMPTE (nom_compte, prenom_compte, email_compte, password_compte) 
                 VALUES (:nom, :prenom, :email, :password)";
         $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
         $params = [

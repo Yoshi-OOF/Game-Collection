@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="Css/Navigation.css">
 <nav>
     <ul>
         <img src="../Assets/img/logo.png" alt="logo" >

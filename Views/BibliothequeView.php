@@ -36,7 +36,8 @@
                                     <p><?php echo $jeu["nom_jeu"]; ?></p>
                                     <p><?php echo $jeu["temps_jeu"]; ?> h</p>
                                 </div>
-                                <div class="device" style="display: flex; gap: 10px;">
+                                <div class="device">
+                                     <!-- style="display: flex; gap: 10px;"> -->
                                     <?php foreach ($jeux_par_plateforme[$jeu['id_jeu']] as $platforme): ?>
                                         <p><?php echo $platforme['nom_plateforme']; ?></p>
                                     <?php endforeach; ?>

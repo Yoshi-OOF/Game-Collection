@@ -9,38 +9,6 @@ html {
     background-color: #1E1B26;
 }
 
-/* HEADER */
-header {
-    background-color: #1E1B26;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-}
-
-header img {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-nav {
-    display: flex;
-    gap: 30px;
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 0.9rem;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
 /* ACCUEIL */
 #salutation {
     height: 250px;
@@ -78,6 +46,9 @@ nav a:hover {
 
 .device {
     background-color: #1E1B26;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 
@@ -94,6 +65,7 @@ nav a:hover {
 .device p {
     color: grey;
     font-size: 20px;
+
 }
 
 .game-display a {
