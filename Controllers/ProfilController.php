@@ -8,7 +8,6 @@ if (!isset($_SESSION['id_compte'])) {
     exit();
 }
 
-$model = new ModifierJeuModel($pdo);
+$model = ProfileModel($pdo);
 
-include __DIR__ . '/../Views/ModifierJeuView.php';
 ?>

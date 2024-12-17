@@ -1,12 +1,6 @@
 <?php
 session_start();
 
-// Vérifie si l'utilisateur est connecté
-if (!isset($_SESSION['user_id'])) {
-    header("Location: LoginView.php");
-    exit();
-}
-
 $username = $_SESSION['username'];
 ?>
 
@@ -20,13 +14,7 @@ $username = $_SESSION['username'];
 </head>
 <body>
     <header>
-        <div class="logo">Logo</div>
-        <nav>
-            <a href="LibraryView.php">Ma Bibliothèque</a>
-            <a href="AddGameView.php">Ajouter un jeu</a>
-            <a href="LeaderboardView.php">Classement</a>
-            <a href="ProfileView.php" class="active">Profil</a>
-        </nav>
+        <?php include __DIR__ . '/NavigationView.php'; ?>
     </header>
 
     <main>

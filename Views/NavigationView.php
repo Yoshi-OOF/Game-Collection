@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="Css/Navigation.css">
 <nav>
     <ul>
-        <img src="../Assets/img/logo" alt="logo" >
+        <img src="../Assets/img/logo.png" alt="logo" >
         <li><a href="index.php?action=bibliotheque">Ma Bibliothèque</a></li>
         <li><a href="index.php?action=ajouterJeu">Ajouter un Jeu</a></li>
         <li><a href="index.php?action=classement">Classement</a></li>
