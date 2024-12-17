@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Classement des temps passés</title>
-    <link rel="stylesheet" href="/Game-Collection/Css/Classement.css">
+    <link rel="stylesheet" href="../Css/Classement.css">
 </head>
 <body>
     <header class="header">
