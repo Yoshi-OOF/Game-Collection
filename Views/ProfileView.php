@@ -16,7 +16,7 @@ $username = $_SESSION['username'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil - Game Collection</title>
-    <link rel="stylesheet" href="../Css/Profile.css">
+    <link rel="stylesheet" href="Css/Profile.css">
 </head>
 <body>
     <header>
