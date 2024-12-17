@@ -68,6 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 break;
             case 'profil':
                 include __DIR__ . '/Controllers/ProfilController.php';
+                break;
             default:
                 include __DIR__ . '/Controllers/BibliothequeController.php'; // Default Bibliotheque
                 break;

@@ -8,6 +8,8 @@ if (!isset($_SESSION['id_compte'])) {
     exit();
 }
 
-$model = ProfileModel($pdo);
+$model = new ProfilModel($pdo);
+
+include __DIR__ . '/../Views/ProfilView.php';
 
 ?>
