@@ -4,7 +4,7 @@ CREATE DATABASE `td22-5`;
 USE `td22-5`;
 
 CREATE TABLE COMPTE(
-   id_compte INT,
+   id_compte INT AUTO_INCREMENT,
    nom_compte VARCHAR(256),
    prenom_compte VARCHAR(256),
    email_compte VARCHAR(256),
@@ -13,7 +13,7 @@ CREATE TABLE COMPTE(
 );
 
 CREATE TABLE JEU(
-   id_jeu INT,
+   id_jeu INT AUTO_INCREMENT,
    nom_jeu VARCHAR(256),
    desc_jeu VARCHAR(2560),
    editeur_jeu VARCHAR(256),
@@ -24,7 +24,7 @@ CREATE TABLE JEU(
 );
 
 CREATE TABLE PLATEFORME(
-   id_plateforme INT,
+   id_plateforme INT AUTO_INCREMENT,
    nom_plateforme VARCHAR(128),
    PRIMARY KEY(id_plateforme)
 );
