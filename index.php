@@ -60,9 +60,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             case 'ajouterJeu':
                 include __DIR__ . '/Controllers/AjouterJeuController.php';
                 break;
+            case 'modifierJeu':
+                include __DIR__ . '/Controllers/ModifierJeuController.php';
+                break;
             case 'classement':
                 include __DIR__ . '/Controllers/ClassementController.php';
                 break;
+            case 'profil':
+                include __DIR__ . '/Controllers/ProfilController.php';
             default:
                 include __DIR__ . '/Controllers/BibliothequeController.php'; // Default Bibliotheque
                 break;

@@ -4,18 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajouter un jeu</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Css/ModifierJeu.css">
 </head>
 <body>
-    <header>
-        <div class="logo">GameCollection <span>Logo</span></div>
-        <nav>
-            <a href="#">MA BIBLIOTHÈQUE</a>
-            <a href="#">AJOUTER UN JEU</a>
-            <a href="#">CLASSEMENT</a>
-            <a href="#">PROFIL</a>
-        </nav>
+    <header class="header">
+        <?php include __DIR__ . '/NavigationView.php'; ?>
     </header>
+        
     <main>
         <h1>Ajouter un jeu à sa bibliothèque</h1>
         <p>Le jeu que vous souhaitez ajouter n'existe pas ! Vous pouvez le créer, celui-ci sera automatiquement ajouté à votre bibliothèque !</p>
