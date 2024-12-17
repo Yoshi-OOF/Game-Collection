@@ -10,8 +10,8 @@ include_once __DIR__ . '/../Classes/DataConstructor.php';
 
 // $data = new Data($host, $dbname, $username, $password);
 
-$model = new RegisterModel($data);
-$modelLogin = new LoginModel($data);
+$model = new RegisterModel($pdo);
+$modelLogin = new LoginModel($pdo);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nom = $_POST['nom'] ?? '';

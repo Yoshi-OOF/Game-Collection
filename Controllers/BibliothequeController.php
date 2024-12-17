@@ -15,7 +15,7 @@ $password = '';
 
 $data = new Data($host, $dbname, $username, $password); */
 
-$model = new BibliothequeModel($data);
+$model = new BibliothequeModel($pdo);
 $jeux = $model->get_jeux($_SESSION['id_compte']);
 
 $username = $_SESSION['id_compte']['prenom_compte'];

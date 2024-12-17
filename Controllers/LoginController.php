@@ -9,7 +9,7 @@ $password = '';
 
 $data = new Data($host, $dbname, $username, $password); */
 
-$model = new LoginModel($data);
+$model = new LoginModel($pdo);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     

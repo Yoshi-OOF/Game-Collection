@@ -7,5 +7,5 @@ $dbname = $_ENV['DB_NAME'];
 $username = $_ENV['DB_USER'];
 $password = $_ENV['DB_PASSWORD'];
 
-$data = new Data($host, $dbname, $username, $password);
+$pdo = new Data($host, $dbname, $username, $password);
 ?>

@@ -15,7 +15,7 @@ if (!isset($_SESSION['id_compte'])) {
 
 // $data = new Data($host, $dbname, $username, $password);
 
-$model = new ClassementModel($data);
+$model = new ClassementModel($pdo);
 
 $classement = $model->get_classement();
 
