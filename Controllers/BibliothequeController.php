@@ -22,7 +22,7 @@ $jeux_par_plateforme = [];
 
 foreach ($jeux as $jeu) {
     $id_jeu = $jeu['id_jeu'];
-    $plateformes = $model->get_plateformes_par_jeu($id_jeu);
+    $plateformes = $model->get_platformes($id_jeu);
     $jeux_par_plateforme[$id_jeu] = $plateformes;
 }
 

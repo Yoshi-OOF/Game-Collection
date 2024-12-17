@@ -3,7 +3,7 @@
         'name' => 'andre/game-collection',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '8efe8198d02911b35201b94dc186ce15bf26e21a',
+        'reference' => 'a54353f7402a7f585453324bb22c8166c6813e17',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'andre/game-collection' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '8efe8198d02911b35201b94dc186ce15bf26e21a',
+            'reference' => 'a54353f7402a7f585453324bb22c8166c6813e17',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
