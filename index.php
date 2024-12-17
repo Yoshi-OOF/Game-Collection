@@ -1,12 +1,12 @@
 <?php
 session_start();
-/*
-// Load dependencies
 require 'vendor/autoload.php';
-
-// Load environment variables
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
+/*
+// Load dependencies
+
+// Load environment variables
 
 // require 'db.php';
 */
