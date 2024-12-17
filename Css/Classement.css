@@ -1,0 +1,50 @@
+/* Général */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #15151d;
+    color: #ffffff;
+}
+
+h1 {
+    text-align: left;
+    padding: 20px;
+}
+
+/* Conteneur principal */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Tableau */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #1f1f2b;
+    color: #ffffff;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    font-weight: bold;
+}
+
+tr:nth-child(odd) {
+    background-color: #23232e;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #666;
+}
