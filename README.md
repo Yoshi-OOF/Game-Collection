@@ -43,7 +43,7 @@ Pour configurer le projet sur votre machine locale :
     ```bash
     composer install
     ```
-5. Démarrez le serveur Apache et rendez-vous sur `http://localhost/Game-Collection/index.php` pour utiliser l'application.
+5. Démarrez le serveur Apache et rendez-vous sur `http://localhost../index.php` pour utiliser l'application.
 
 ## Dépendances
 

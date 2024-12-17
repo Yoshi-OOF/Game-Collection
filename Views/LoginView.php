@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion - Game Collection</title>
-    <link rel="stylesheet" href="/Game-Collection/Css/Login.css">
+    <link rel="stylesheet" href="../Css/Login.css">
 </head>
 <body>
     <div class="login-container">
