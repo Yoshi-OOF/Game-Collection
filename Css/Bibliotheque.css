@@ -1,9 +1,12 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
-    padding: 0;
-    background-color: #121212;
-    color: #fff;
+    font-family: 'Barlow', sans-serif;
+    font-size: 24px;
+    color: white;       
+}
+
+html {
+    background-color: #1E1B26;
 }
 
 /* HEADER */
@@ -38,108 +41,90 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Fin header */
-
-.nav ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+/* ACCUEIL */
+#salutation {
+    height: 250px;
+    background-image: url(../Assets/img/bg_zelda2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px;
 }
 
-.nav ul img {
-    height: 40px;
-    margin-right: 20px;
+#salutation h2 {
+    filter: brightness(150%);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 60px;
+    color: white;
+    width: 700px;
 }
 
-.nav ul li {
-    margin-left: 20px;
+#my-games {
+    background-color: #1E1B26;
+    padding: 40px 150px 0px 150px;
 }
 
-.nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-.nav ul li a:hover {
-    text-decoration: underline;
-}
-
-.hero {
-    text-align: center;
-    padding: 50px 20px;
-    background: url('../Assets/img/bg_zelda.jpg') no-repeat center center/cover;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-}
-
-.games {
-    padding: 20px;
-}
-
-.games h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.game-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    justify-content: center;
-}
-
-.game {
-    background-color: #252540;
+.game-card {
+    height: 300px;
+    width: 400px;
     border-radius: 10px;
-    overflow: hidden;
+    margin: 15px;
+}
+
+.game-card img {
+    width: 400px;
+    border-radius: 10px;
+}
+
+.device {
+    background-color: #1E1B26;
+}
+
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-info p {
+    display: inline;
+    gap: 10px;
+}
+
+.device p {
+    color: grey;
+    font-size: 20px;
+}
+
+.game-display a {
+    transition: ease all .2s;
+    position: relative;
+    bottom: 0px;
+    text-decoration: none;
+}
+
+.game-display {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.game-display a:hover {
+    position: relative;
+    bottom: 5px;
+}
+
+.error-no-games {
+    padding: 25px;
     text-align: center;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.game:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.game img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
-
-.game h3 {
-    margin: 10px 0;
-    font-size: 1rem;
-    color: #f39c12;
-}
-
-.game p {
-    margin: 5px 0;
-    color: #ccc;
-    font-size: 0.9rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-}
-
+/* FOOTER */
 footer {
+    background-color: #1E1B26;
     text-align: center;
-    padding: 20px;
-    background-color: #1f1f2e;
-    color: #ccc;
-    font-size: 0.9rem;
+    padding: 60px;
+}
+
+footer h3 {
+    font-size: 16px;
 }

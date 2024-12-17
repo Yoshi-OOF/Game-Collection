@@ -17,6 +17,14 @@ $data = new Data($host, $dbname, $username, $password);
 $model = new BibliothequeModel($data);
 $jeux = $model->get_jeux($_SESSION['id_compte']);
 
+$jeux_par_plateforme = [];
+
+foreach ($jeux as $jeu) {
+    $id_jeu = $jeu['id_jeu'];
+    $plateformes = $model->get_plateformes_par_jeu($id_jeu);
+    $jeux_par_plateforme[$id_jeu] = $plateformes;
+}
+
 $username = $_SESSION['id_compte']['prenom_compte'];
 include __DIR__ . '/../Views/BibliothequeView.php';
 
