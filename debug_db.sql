@@ -1,24 +1,24 @@
-DROP DATABASE IF EXISTS gamecollection;
-CREATE DATABASE gamecollection;
+DROP DATABASE IF EXISTS td22-5;
+CREATE DATABASE td22-5;
 
-USE gamecollection;
+USE td22-5;
 
 CREATE TABLE COMPTE(
    id_compte INT,
-   nom_compte VARCHAR(128),
-   prenom_compte VARCHAR(128),
-   email_compte VARCHAR(128),
-   password_compte VARCHAR(128),
+   nom_compte VARCHAR(256),
+   prenom_compte VARCHAR(256),
+   email_compte VARCHAR(256),
+   password_compte VARCHAR(256),
    PRIMARY KEY(id_compte)
 );
 
 CREATE TABLE JEU(
    id_jeu INT,
-   nom_jeu VARCHAR(128),
+   nom_jeu VARCHAR(256),
    desc_jeu VARCHAR(2560),
-   editeur_jeu VARCHAR(128),
-   url_site_jeu VARCHAR(128),
-   url_couverture_jeu VARCHAR(128),
+   editeur_jeu VARCHAR(256),
+   url_site_jeu VARCHAR(256),
+   url_couverture_jeu VARCHAR(256),
    date_sortie_jeu DATE,
    PRIMARY KEY(id_jeu)
 );
