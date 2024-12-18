@@ -43,6 +43,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         case 'registerController':
             include __DIR__ . '/Controllers/RegisterController.php';
             break;
+        case 'modifierProfil':
+            include __DIR__ . '/Controllers/ModifierProfilController.php';
+            break;
         default:
             include __DIR__ . '/Controllers/LoginController.php'; // Default login
             break;
