@@ -7,7 +7,7 @@ CREATE TABLE COMPTE(
    id_compte INT,
    nom_compte VARCHAR(256),
    prenom_compte VARCHAR(256),
-   email_compte VARCHAR(256),
+   email_compte VARCHAR(256) UNIQUE,
    password_compte VARCHAR(256),
    PRIMARY KEY(id_compte)
 );
