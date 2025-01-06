@@ -11,7 +11,7 @@
 
 <body>
     <div class="logo">
-        <img src="../Assets/img/logo.png" alt="logo">
+        <img src="Assets/img/logo.png" alt="logo">
     </div>
     <div class="nav-links">
         <a href="index.php?action=bibliotheque">Ma Bibliothèque</a>

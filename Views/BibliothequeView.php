@@ -56,9 +56,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer>
-        <h3>Game Collection - 2023 - Tous droits réservés</h3>
-    </footer>
+    <?php include __DIR__ . '/FooterView.php'; ?>
 </body>
 
 </html>

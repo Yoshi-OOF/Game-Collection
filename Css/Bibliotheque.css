@@ -51,7 +51,6 @@ html {
     flex-wrap: wrap;
 }
 
-
 .card-info {
     display: flex;
     justify-content: space-between;
@@ -88,15 +87,4 @@ html {
 .error-no-games {
     padding: 25px;
     text-align: center;
-}
-
-/* FOOTER */
-footer {
-    background-color: #1E1B26;
-    text-align: center;
-    padding: 60px;
-}
-
-footer h3 {
-    font-size: 16px;
 }
