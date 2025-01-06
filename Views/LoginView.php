@@ -22,10 +22,12 @@
             <input type="email" id="email" name="email" placeholder="Email" required>
             <label for="password">Mot de passe :</label>
             <input type="password" id="password" name="password" placeholder="Mot de passe" required>
-            <button type="submit">Se connecter</button>
+            <button type="submit">SE CONNECTER</button>
         </form>
             
-        <a href="index.php?action=register">S'inscrire</a>
+        <div>
+            <a class="register-btn" href="index.php?action=register">S'inscrire</a>
+        </div>
     </div>
 </body>
 </html>
