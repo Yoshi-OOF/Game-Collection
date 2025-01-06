@@ -43,5 +43,7 @@
             <button type="submit">AJOUTER LE JEU</button>
         </form>
     </main>
+
+    <?php include __DIR__ . '/FooterView.php'; ?>
 </body>
 </html>

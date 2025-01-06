@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion - Game Collection</title>
     <link rel="stylesheet" href="Css/Login.css">
 </head>
+
 <body>
     <div class="login-container">
         <h1>Se connecter à Game Collection</h1>
@@ -24,10 +26,14 @@
             <input type="password" id="password" name="password" placeholder="Mot de passe" required>
             <button type="submit">SE CONNECTER</button>
         </form>
-            
+
         <div>
             <a class="register-btn" href="index.php?action=register">S'inscrire</a>
         </div>
     </div>
+
+    <?php include __DIR__ . '/FooterView.php'; ?>
+
 </body>
+
 </html>

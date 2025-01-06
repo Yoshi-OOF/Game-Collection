@@ -4,12 +4,14 @@ $username = $_SESSION['id_compte']['prenom_compte']
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil - Game Collection</title>
     <link rel="stylesheet" href="Css/Profil.css">
 </head>
+
 <body>
     <header>
         <?php include __DIR__ . '/NavigationView.php'; ?>
@@ -30,7 +32,7 @@ $username = $_SESSION['id_compte']['prenom_compte']
             <label for="password">Mot de passe :</label>
             <input type="password" id="password" name="password">
 
-            <label for="confirm-password">Confirmation du mot de passe :</label>   
+            <label for="confirm-password">Confirmation du mot de passe :</label>
             <input type="password" id="confirm-password" name="confirm-password">
 
             <button type="submit" name="action" value="modify" class="btn btn-modify">MODIFIER</button>
@@ -38,5 +40,9 @@ $username = $_SESSION['id_compte']['prenom_compte']
             <button type="submit" name="action" value="logout" class="btn btn-logout">SE DÉCONNECTER</button>
         </form>
     </div>
+    
+    <?php include __DIR__ . '/FooterView.php'; ?>
+
 </body>
+
 </html>

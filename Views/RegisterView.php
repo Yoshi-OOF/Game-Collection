@@ -30,5 +30,8 @@
         
         <a href="index.php?action=login">Se connecter</a>
     </div>
+    
+    <?php include __DIR__ . '/FooterView.php'; ?>
+
 </body>
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,12 @@
     <link rel="stylesheet" href="Css/Bibliotheque.css">
     <title>Accueil - Game Collection</title>
 </head>
+
 <body>
     <header class="header">
         <?php include __DIR__ . '/NavigationView.php'; ?>
     </header>
-    
+
     <!-- PRÉSENTATION -->
     <section id="salutation">
         <h2>BONJOUR <?php echo strtoupper(htmlspecialchars($username)); ?> !</h2>
@@ -30,14 +32,14 @@
                     <?php foreach ($jeux as $jeu): ?>
                         <a href="index.php?action=modifierJeu">
                             <div class="game-card">
-                                <img src="<?php echo htmlspecialchars($jeu['url_couverture_jeu']); ?>" alt="RDR">
+                                <img src="<?php echo htmlspecialchars($jeu['url_couverture_jeu']); ?>" alt="RDR" height="150px">
 
-                                <div class="card-info"> 
+                                <div class="card-info">
                                     <p><?php echo $jeu["nom_jeu"]; ?></p>
                                     <p><?php echo $jeu["temps_jeu"]; ?> h</p>
                                 </div>
                                 <div class="device">
-                                     <!-- style="display: flex; gap: 10px;"> -->
+                                    <!-- style="display: flex; gap: 10px;"> -->
                                     <?php foreach ($jeux_par_plateforme[$jeu['id_jeu']] as $platforme): ?>
                                         <p><?php echo $platforme['nom_plateforme']; ?></p>
                                     <?php endforeach; ?>

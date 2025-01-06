@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Classement des temps passés</title>
     <link rel="stylesheet" href="Css/Classement.css">
+    <title>Classement des temps passés</title>
 </head>
+
 <body>
     <header class="header">
         <?php include __DIR__ . '/NavigationView.php'; ?>
@@ -38,9 +40,10 @@
                 ?>
             </tbody>
         </table>
-        <footer>
-            Game Collection - 2023 - Tous droits réservés
-        </footer>
     </div>
+
+    <?php include __DIR__ . '/FooterView.php'; ?>
+
 </body>
+
 </html>
