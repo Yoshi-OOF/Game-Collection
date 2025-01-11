@@ -8,14 +8,14 @@ class AjouterJeuModel {
     }
 
     public function rechercherJeu($nom) {
-        $query = "SELECT * FROM jeu WHERE nom_jeu LIKE :nom";
+        $query = "SELECT * FROM JEU WHERE nom_jeu LIKE :nom";
         $params = [':nom' => "%$nom%"];
     
         return $this->data->query($query, $params);
     }
 
     public function ajouterJeu($nom, $desc, $editeur, $url_site, $url_couverture, $date_sortie) {
-        $query = "INSERT INTO jeu (nom_jeu, desc_jeu, editeur_jeu, url_site_jeu, url_couverture_jeu, date_sortie_jeu) 
+        $query = "INSERT INTO JEU (nom_jeu, desc_jeu, editeur_jeu, url_site_jeu, url_couverture_jeu, date_sortie_jeu) 
                   VALUES (:nom, :desc, :editeur, :url_site, :url_couverture, :date_sortie)";
         $params = [
             ':nom' => $nom,

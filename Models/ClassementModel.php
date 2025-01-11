@@ -9,7 +9,7 @@ class ClassementModel {
 
     public function get_classement() {
         $query = "SELECT * FROM Possede 
-            INNER JOIN Jeu ON jeu.id_jeu = Possede.id_jeu 
+            INNER JOIN Jeu ON JEU.id_jeu = Possede.id_jeu 
             INNER JOIN Compte ON compte.id_compte = Possede.id_compte ORDER BY Possede.temps_jeu DESC";
         return $this->data->query($query);
     }
