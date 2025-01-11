@@ -28,7 +28,7 @@ class RegisterModel {
     }
 
     public function emailExists($email) {
-        $query = "SELECT * FROM compte WHERE email_compte = :email";
+        $query = "SELECT * FROM COMPTE WHERE email_compte = :email";
         $params = [':email' => $email];
         $result = $this->data->query($query, $params);
 

@@ -22,7 +22,7 @@ L'application utilise une base de données MySQL nommée `gamecollection` avec l
 - `JEU` - Contient les informations des jeux.
 - `PLATEFORME` - Contient les informations sur les plateformes.
 - `POSSEDE` - Lie les utilisateurs aux jeux qu'ils possèdent.
-- `COMPATIBLE` - Lie les jeux aux plateformes avec lesquelles ils sont compatibles.
+- `COMPATIBLE` - Lie les jeux aux plateformes avec lesquelles ils sont COMPATIBLEs.
 
 ## Formatage des Données
 

@@ -26,7 +26,7 @@ class ProfilModel {
         $params = [':id' => $_SESSION['id_compte']['id_compte']];
         $this->data->query($query, $params);
 
-        $query = "DELETE FROM compte WHERE id_compte = :id";
+        $query = "DELETE FROM COMPTE WHERE id_compte = :id";
         $this->data->query($query, $params);
 
         session_destroy();
@@ -41,13 +41,13 @@ class ProfilModel {
     }
 
     public function getInfosCompte() {
-        $query = "SELECT * FROM compte WHERE id_compte = :id";
+        $query = "SELECT * FROM COMPTE WHERE id_compte = :id";
         $params = [':id' => $_SESSION['id_compte']['id_compte']];
         return $this->data->query($query, $params)[0];
     }
 
     public function emailExists($email, $currentId) {
-        $query = "SELECT COUNT(*) as count FROM compte WHERE email_compte = :email AND id_compte != :id";
+        $query = "SELECT COUNT(*) as count FROM COMPTE WHERE email_compte = :email AND id_compte != :id";
         $params = [
             ':email' => $email,
             ':id' => $currentId
