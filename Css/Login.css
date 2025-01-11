@@ -22,6 +22,7 @@ body {
     font-size: 25px;
     margin-bottom: 20px;
     font-weight: bold;
+    text-align: left;
 }
 
 .login-container label {
@@ -56,16 +57,19 @@ body {
 }
 
 .login-container button {
-    width: 100%;
+    width: 30%;
     padding: 12px;
     background-color: #6a5acd;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    /* aligner le bouton à gauche */
+    margin-right: 75%;
+
 }
 
 .login-container button:hover {
