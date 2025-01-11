@@ -20,14 +20,22 @@ $username = $_SESSION['id_compte']['prenom_compte']
     <div class="container">
         <h1>Mon profil</h1>
         <form action="index.php?action=modifierProfil" method="post">
+            <?php if (isset($success)): ?>
+                <p class="success"><?php echo htmlspecialchars($success); ?></p>
+            <?php endif; ?>
+
             <label for="nom">Nom :</label>
-            <input type="text" id="nom" name="nom" value="MARCEL">
+            <input type="text" id="nom" name="nom" value="<?php echo htmlspecialchars($infos_compte['nom_compte']); ?>">
 
             <label for="prenom">Prénom :</label>
-            <input type="text" id="prenom" name="prenom" value="">
+            <input type="text" id="prenom" name="prenom" value="<?php echo htmlspecialchars($infos_compte['prenom_compte']); ?>">
 
             <label for="email">Email :</label>
-            <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($infos_compte['email']); ?>" readonly>
+            <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($infos_compte['email_compte']); ?>" >
+
+            <?php if (isset($error)): ?>
+                <p class="error"><?php echo htmlspecialchars($error); ?></p>
+            <?php endif; ?>
 
             <label for="password">Mot de passe :</label>
             <input type="password" id="password" name="password">

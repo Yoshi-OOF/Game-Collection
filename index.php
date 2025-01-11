@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             include __DIR__ . '/Controllers/RegisterController.php';
             break;
         case 'modifierProfil':
-            include __DIR__ . '/Controllers/ModifierProfilController.php';
+            include __DIR__ . '/Controllers/ProfilController.php';
             break;
         default:
             include __DIR__ . '/Controllers/LoginController.php'; // Default login

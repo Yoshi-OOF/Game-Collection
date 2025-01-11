@@ -75,3 +75,21 @@ input:focus {
 .btn:hover {
     opacity: 0.8;
 }
+
+/* Message d'erreur */
+.error {
+    color: #ff6b6b;
+    background-color: #2e2e38;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 40px;
+}
+
+/* Message de succès */
+.success {
+    color: #2ed573;
+    background-color: #2e2e38;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 20px;
+}
