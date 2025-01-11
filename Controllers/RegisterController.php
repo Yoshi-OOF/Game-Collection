@@ -33,9 +33,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $result = $model->registerUser($nom, $prenom, $email, $password);
 
     if ($result) {
-        $id_compte = $modelLogin->authenticate($email, $password);
+        $compte = $modelLogin->authenticate($email, $password);
         session_start();
-        $_SESSION['id_compte'] = $id_compte;
+        $_SESSION['compte'] = $compte;
         header("Location: index.php?action=bibliotheque");
     } else {
         echo "Erreur lors de l'inscription.";

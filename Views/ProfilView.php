@@ -1,5 +1,5 @@
 <?php
-$username = $_SESSION['id_compte']['prenom_compte']
+$username = $_SESSION['compte']['prenom_compte']
 ?>
 
 <!DOCTYPE html>
