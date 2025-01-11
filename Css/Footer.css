@@ -1,8 +1,12 @@
 /* FOOTER */
 footer {
-    background-color: #1E1B26;
     text-align: center;
     padding: 60px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #2a2a3d; /* Optionnel : couleur de fond */
+    color: #ffffff; /* Optionnel : couleur du texte */
 }
 
 footer h3 {
