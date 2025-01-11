@@ -46,13 +46,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         case 'modifierProfil':
             include __DIR__ . '/Controllers/ProfilController.php';
             break;
+        case 'ajouterJeu':
+            include __DIR__ . '/Controllers/AjouterJeuController.php';
+            break;
+        case 'creerJeu':
+            include __DIR__ . '/Controllers/AjouterJeuController.php';
+            break;
         default:
             include __DIR__ . '/Controllers/LoginController.php'; // Default login
             break;
     }
 } else {
     // GET requests
-    if (isset($_SESSION['id_compte'])) {
+    if (isset($_SESSION['compte'])) {
         switch ($action) {
             case 'bibliotheque':
                 include __DIR__ . '/Controllers/BibliothequeController.php';

@@ -13,9 +13,9 @@ class LoginModel {
         $result = $this->data->query($query, $params);
 
         if ($result) {
-            $id_compte = $result[0];
-            if (password_verify($password, $id_compte['password_compte'])) {
-                return $id_compte;
+            $compte = $result[0];
+            if (password_verify($password, $compte['password_compte'])) {
+                return $compte;
             }
         }
         return false;

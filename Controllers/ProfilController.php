@@ -3,7 +3,7 @@
 include_once __DIR__ . '/../Classes/Data.php';
 include_once __DIR__ . '/../Classes/DataConstructor.php';
 
-if (!isset($_SESSION['id_compte'])) {
+if (!isset($_SESSION['compte'])) {
     header("Location: index.php?action=login");
     exit();
 }
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 exit();
             }
 
-            if ($model->emailExists($_POST['email'], $_SESSION['id_compte']['id_compte'])) {
+            if ($model->emailExists($_POST['email'], $_SESSION['compte']['id_compte'])) {
                 $error = "Cet email est déjà utilisé";
                 include __DIR__ . '/../Views/ProfilView.php';
                 exit();
