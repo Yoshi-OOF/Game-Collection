@@ -22,7 +22,7 @@ class ProfilModel {
     }
 
     public function delete() {
-        $query = "DELETE FROM possede WHERE id_compte = :id";
+        $query = "DELETE FROM POSSEDE WHERE id_compte = :id";
         $params = [':id' => $_SESSION['id_compte']['id_compte']];
         $this->data->query($query, $params);
 

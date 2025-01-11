@@ -31,7 +31,7 @@ class AjouterJeuModel {
     }
 
     public function ajouterCompte($id_jeu, $id_compte) {
-        $query = "INSERT INTO possede (id_jeu, id_compte) VALUES (:id_jeu, :id_compte)";
+        $query = "INSERT INTO POSSEDE (id_jeu, id_compte) VALUES (:id_jeu, :id_compte)";
         $params = [
             ':id_jeu' => $id_jeu,
             ':id_compte' => $id_compte
