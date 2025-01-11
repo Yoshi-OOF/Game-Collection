@@ -73,6 +73,8 @@ form button:hover {
     color: #FFFFFF;
     text-decoration: none;
     font-size: 14px;
+    margin-top: 3%;
+    display: block;
 }
 
 .form-container a:hover {
@@ -89,3 +91,4 @@ form button:hover {
         padding: 8px 10px;
     }
 }
+
