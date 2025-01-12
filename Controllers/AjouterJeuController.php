@@ -25,6 +25,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 include __DIR__ . '/../Views/AjouterJeuView.php';
                 exit();
             }
+            $plateformes = [];
+            foreach ($jeux as $jeu) {
+                $plateformes[$jeu["id_jeu"]] = $model->rechercherPlateforme($jeu["id_jeu"]);
+            }
             break;
         case 'creer':
             if (empty($_POST['nom']) || empty($_POST['desc']) || empty($_POST['editeur']) || empty($_POST['url_site']) || empty($_POST['url_couverture']) || empty($_POST['date_sortie'])) {

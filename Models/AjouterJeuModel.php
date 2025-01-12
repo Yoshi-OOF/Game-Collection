@@ -14,8 +14,8 @@ class AjouterJeuModel {
         return $this->data->query($query, $params);
     }
 
-    public function rechercherPlatforme($id_jeu) {
-        $query = "SELECT * FROM POSSEDE INNER JOIN PLATFORME ON POSSEDE.id_platforme = PLATFORME.id_platforme 
+    public function rechercherPlateforme($id_jeu) {
+        $query = "SELECT * FROM COMPATIBLE INNER JOIN PLATEFORME ON COMPATIBLE.id_plateforme = PLATEFORME.id_plateforme 
         WHERE id_jeu LIKE :id_jeu";
         $params = [':id_jeu' => $id_jeu];
     

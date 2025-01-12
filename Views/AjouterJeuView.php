@@ -17,7 +17,7 @@
         <h1>Ajouter un jeu à sa bibliothèque</h1>
 
         <?php if (!isset($error) || $error != "Le jeu que vous souhaiter ajouter n'exite pas ! Vous pouvez le créer, celui-ci sera automatiquement ajouté à votre bibliothèque !") : ?>
-            <form action="index.php?action=ajouterJeu" method="post">
+            <form class="form" action="index.php?action=ajouterJeu" method="post">
                 <input type="hidden" name="action" value="rechercher">
                 <label for="nom">Nom du jeu</label>
                 <input type="text" name="nom" id="nom" value="<?= $_POST['nom'] ?? '' ?>" required>
@@ -33,41 +33,6 @@
             <p class="success"><?= $success ?></p>
         <?php endif; ?>
 
-        <?php if (!empty($jeux)) : ?>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nom</th>
-                        <th>Description</th>
-                        <th>Editeur</th>
-                        <th>Site</th>
-                        <th>Couverture</th>
-                        <th>Date de sortie</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($jeux as $jeu) : ?>
-                        <tr>
-                            <td><?= $jeu['nom_jeu'] ?></td>
-                            <td><?= $jeu['desc_jeu'] ?></td>
-                            <td><?= $jeu['editeur_jeu'] ?></td>
-                            <td><?= $jeu['url_site_jeu'] ?></td>
-                            <td><?= $jeu['url_couverture_jeu'] ?></td>
-                            <td><?= $jeu['date_sortie_jeu'] ?></td>
-                            <td>
-                                <form action="index.php?action=ajouterJeu" method="post">
-                                    <input type="hidden" name="action" value="ajouterCompte">
-                                    <input type="hidden" name="id_jeu" value="<?= $jeu['id_jeu'] ?>">
-                                    <button type="submit">Ajouter à ma bibliothèque</button>
-                                </form>
-                            </td>
-                        </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
-        <?php endif; ?>
-
         <?php if (!empty($jeux)): ?>
             <div class="games-container">
                 <?php foreach ($jeux as $jeu): ?>
@@ -75,25 +40,15 @@
                         <img src="<?php echo htmlspecialchars($jeu['url_couverture_jeu']); ?>" alt="<?php echo "Nom du jeu"; ?>">
 
                         <div class="game-info">
-                            <p><?php echo $jeu["nom_jeu"]; ?></p>
-
-                            <a href="http://">ADD</a>
-                        </div>
-                        <div class="game-devices">
-                            <p><?php $jeu['nom_jeu'] ?></p>
-                            <p><?php $jeu['desc_jeu'] ?></p>
-                            <p><?php $jeu['editeur_jeu'] ?></p>
-                            <p><?php $jeu['url_site_jeu'] ?></p>
-                            <p><?php $jeu['url_couverture_jeu'] ?></p>
-                            <p><?php $jeu['date_sortie_jeu'] ?></p>
+                            <p class="game-name"><?php echo $jeu["nom_jeu"]; ?></p>
+                            <form class="game-add" action="index.php?action=ajouterJeu" method="post">
+                                <input type="hidden" name="action" value="ajouterCompte">
+                                <input type="hidden" name="id_jeu" value="<?= $jeu['id_jeu'] ?>">
+                                <button type="submit">AJOUTER</button>
+                            </form>
                         </div>
                     </div>
                 <?php endforeach; ?>
-            </div>
-        <?php else: ?>
-            <div class="error-no-games">
-                <h2>Vous n'avez enregistré aucun jeu pour le moment.</h2>
-                <a href="index.php?action=ajouterJeu">Ajouter un Jeu</a>
             </div>
         <?php endif; ?>
 

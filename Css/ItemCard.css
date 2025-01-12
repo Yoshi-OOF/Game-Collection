@@ -22,11 +22,12 @@
     justify-content: space-between;
 }
 
-.game p {
+.game-name {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
 }
+
 .game a {
     text-decoration: none;
 }

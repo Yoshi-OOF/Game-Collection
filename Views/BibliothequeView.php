@@ -34,7 +34,7 @@
                             <img src="<?php echo htmlspecialchars($jeu['url_couverture_jeu']); ?>" alt="<?php echo "Nom du jeu"; ?>">
 
                             <div class="game-info">
-                                <p><?php echo $jeu["nom_jeu"]; ?></p>
+                                <p class="game-name"><?php echo $jeu["nom_jeu"]; ?></p>
                                 <p>
                                     <?php if (isset($jeu["temps_jeu"])): ?>
                                         <?php echo $jeu["temps_jeu"]; ?>h
