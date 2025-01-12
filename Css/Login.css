@@ -6,6 +6,7 @@ body {
 }
 
 .login-container {
+    min-width: 450px;
     margin-left: auto;
     margin-right: auto;
     background: #2a2a3d;
