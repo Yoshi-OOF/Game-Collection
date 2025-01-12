@@ -57,11 +57,3 @@ form button {
 form button:hover {
     background-color: #5848a4;
 }
-
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #141428;
-    color: #ffffff;
-    font-size: 14px;
-}

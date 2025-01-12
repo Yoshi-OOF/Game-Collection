@@ -6,68 +6,56 @@ body {
 }
 
 .login-container {
-    min-width: 450px;
     margin-left: auto;
     margin-right: auto;
-    background: #2a2a3d;
-    border-radius: 10px;
-    margin-top: 10em;
-    margin-bottom: 10em;
+    margin-top: 8em;
+    margin-bottom: 8em;
+
+    background: #252836;
     padding: 30px;
-    width: 25%;
-    text-align: center;
+    border-radius: 10px;
+    min-width: 450px;
 }
 
 .login-container h1 {
-    font-size: 25px;
     margin-bottom: 20px;
-    font-weight: bold;
-    text-align: left;
+    font-size: 25px;
 }
 
 .login-container label {
     display: block;
-    margin-bottom: 8px;
-    text-align: left;
+    margin-bottom: 6px;
     font-size: 14px;
-    font-weight: 600;
-    color: #b3b3c7;
 }
 
 .login-container input {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     margin-bottom: 15px;
     border: none;
     border-radius: 5px;
-    background-color: #1e1e2f;
+    background: #2B2F40;
     color: white;
     font-size: 14px;
-    box-sizing: border-box;
-}
-
-.login-container input::placeholder {
-    color: #b3b3c7;
 }
 
 .login-container input:focus {
+    border-color: #6272a4;
     outline: none;
-    border: 1px solid #6a5acd;
 }
 
 .login-container button {
-    width: 30%;
-    padding: 12px;
+    cursor: pointer;
+    padding: 10px 30px 10px 30px;
     background-color: #6a5acd;
     color: white;
-    font-size: 12px;
-    font-weight: bold;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-right: 75%;
+    transition: background-color 0.2s ease;
+}
 
+.login-container button:hover {
+    background-color: #5848a4;
 }
 
 .login-container .error {
@@ -79,17 +67,11 @@ body {
 }
 
 .register-btn {
+    color: #FFFFFF;
     text-decoration: none;
-    color: #ffffff;
     font-size: 14px;
+    margin-top: 3%;
     display: block;
-    margin-top: 20px;
-    transition: color 0.2s ease;
-    margin-right: 100%;
-}
-
-.login-container button:hover {
-    background-color: #5848a4;
 }
 
 .register-btn:hover {
