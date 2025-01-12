@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Css/AjouterJeu.css">
+    <link rel="stylesheet" href="Css/ItemCard.css">
     <title>Ajouter un jeu</title>
 </head>
 
@@ -14,7 +15,7 @@
     </header>
     <main>
         <h1>Ajouter un jeu à sa bibliothèque</h1>
-        
+
         <?php if (!isset($error) || $error != "Le jeu que vous souhaiter ajouter n'exite pas ! Vous pouvez le créer, celui-ci sera automatiquement ajouté à votre bibliothèque !") : ?>
             <form action="index.php?action=ajouterJeu" method="post">
                 <input type="hidden" name="action" value="rechercher">
@@ -66,49 +67,78 @@
                 </tbody>
             </table>
         <?php endif; ?>
-        
+
+        <?php if (!empty($jeux)): ?>
+            <div class="games-container">
+                <?php foreach ($jeux as $jeu): ?>
+                    <div class="game">
+                        <img src="<?php echo htmlspecialchars($jeu['url_couverture_jeu']); ?>" alt="<?php echo "Nom du jeu"; ?>">
+
+                        <div class="game-info">
+                            <p><?php echo $jeu["nom_jeu"]; ?></p>
+
+                            <a href="http://">ADD</a>
+                        </div>
+                        <div class="game-devices">
+                            <p><?php $jeu['nom_jeu'] ?></p>
+                            <p><?php $jeu['desc_jeu'] ?></p>
+                            <p><?php $jeu['editeur_jeu'] ?></p>
+                            <p><?php $jeu['url_site_jeu'] ?></p>
+                            <p><?php $jeu['url_couverture_jeu'] ?></p>
+                            <p><?php $jeu['date_sortie_jeu'] ?></p>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        <?php else: ?>
+            <div class="error-no-games">
+                <h2>Vous n'avez enregistré aucun jeu pour le moment.</h2>
+                <a href="index.php?action=ajouterJeu">Ajouter un Jeu</a>
+            </div>
+        <?php endif; ?>
+
         <?php if (isset($error) && $error == "Le jeu que vous souhaiter ajouter n'exite pas ! Vous pouvez le créer, celui-ci sera automatiquement ajouté à votre bibliothèque !") : ?>
             <form action="index.php?action=ajouterJeu" method="post">
-            <input type="hidden" name="action" value="creer">
-            <label for="nom">Nom du jeu</label>
-            <input type="text" id="nom" name="nom" required>
+                <input type="hidden" name="action" value="creer">
+                <label for="nom">Nom du jeu</label>
+                <input type="text" id="nom" name="nom" required>
 
-            <label for="editeur">Editeur du jeu</label>
-            <input type="text" id="editeur" name="editeur" required>
+                <label for="editeur">Editeur du jeu</label>
+                <input type="text" id="editeur" name="editeur" required>
 
-            <label for="date_sortie">Sortie du jeu</label>
-            <input type="date" id="date_sortie" name="date_sortie" required>
+                <label for="date_sortie">Sortie du jeu</label>
+                <input type="date" id="date_sortie" name="date_sortie" required>
 
-            <fieldset>
-                <legend>Plateformes</legend>
-                <label for="playstation">
-                <input type="checkbox" id="playstation" name="plateformes[]" value="Playstation">
-                Playstation
-                </label>
-                <label for="xbox">
-                <input type="checkbox" id="xbox" name="plateformes[]" value="Xbox">
-                Xbox
-                </label>
-                <label for="nintendo">
-                <input type="checkbox" id="nintendo" name="plateformes[]" value="Nintendo">
-                Nintendo
-                </label>
-                <label for="pc">
-                <input type="checkbox" id="pc" name="plateformes[]" value="PC">
-                PC
-                </label>
-            </fieldset>
+                <fieldset>
+                    <legend>Plateformes</legend>
+                    <label for="playstation">
+                        <input type="checkbox" id="playstation" name="plateformes[]" value="Playstation">
+                        Playstation
+                    </label>
+                    <label for="xbox">
+                        <input type="checkbox" id="xbox" name="plateformes[]" value="Xbox">
+                        Xbox
+                    </label>
+                    <label for="nintendo">
+                        <input type="checkbox" id="nintendo" name="plateformes[]" value="Nintendo">
+                        Nintendo
+                    </label>
+                    <label for="pc">
+                        <input type="checkbox" id="pc" name="plateformes[]" value="PC">
+                        PC
+                    </label>
+                </fieldset>
 
-            <label for="desc">Description du jeu</label>
-            <textarea id="desc" name="desc" required></textarea>
+                <label for="desc">Description du jeu</label>
+                <textarea id="desc" name="desc" required></textarea>
 
-            <label for="url_couverture">URL de la couverture</label>
-            <input type="url" id="url_couverture" name="url_couverture">
+                <label for="url_couverture">URL de la couverture</label>
+                <input type="url" id="url_couverture" name="url_couverture">
 
-            <label for="url_site">URL du site</label>
-            <input type="url" id="url_site" name="url_site">
+                <label for="url_site">URL du site</label>
+                <input type="url" id="url_site" name="url_site">
 
-            <button type="submit">Ajouter le jeu</button>
+                <button type="submit">Ajouter le jeu</button>
             </form>
         <?php endif; ?>
     </main>
