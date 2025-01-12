@@ -74,7 +74,7 @@ body {
     color: #ccc;
 }
 
-.form-add-time input[type="number"] {
+.form-add-time input[inputmode="numeric"] {
     width: 100%;
     max-width: 100px;
     padding: 0.3rem;

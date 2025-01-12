@@ -33,7 +33,8 @@
                 <form class="form-add-time" action="index.php?action=modifierJeu&id_jeu=<?php echo (int)$jeu['id_jeu']; ?>" method="POST">
                     <label for="temps">Temps passé sur le jeu (en heures) :</label>
                     <input 
-                        type="number" 
+                        type="text"
+                        inputmode="numeric" 
                         name="temps" 
                         id="temps" 
                         min="0" 
