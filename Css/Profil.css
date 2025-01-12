@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #15151d;
+    background-color: #211F2A;
     color: #ffffff;
 }
 
@@ -11,7 +11,7 @@ body {
 .container {
     width: 80%;
     margin: 50px auto;
-    background-color: #1f1f2b;
+    background-color: #211F2A;
     padding: 20px;
     border-radius: 8px;
 }
