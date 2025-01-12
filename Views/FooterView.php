@@ -3,5 +3,5 @@
     <link rel="stylesheet" href="Css/Footer.css">
 
     <footer>
-        <p>Game Collection - 2023 - Tous droits réservés</p>
+        <h3>Game Collection - 2023 - Tous droits réservés</h3>
     </footer>
