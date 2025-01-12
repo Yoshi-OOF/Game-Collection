@@ -11,19 +11,19 @@
         <h1>Inscription</h1>
         <form action="index.php?action=registerController" method="POST">
             <label for="nom">Nom :</label>
-            <input type="text" name="nom" id="nom" placeholder="nom" required>
+            <input class="npt-login" type="text" name="nom" id="nom" required>
 
             <label for="prenom">Prénom :</label>
-            <input type="text" name="prenom" id="prenom" placeholder="prénom" required>
+            <input class="npt-login" type="text" name="prenom" id="prenom" required>
 
             <label for="email">Email :</label>
-            <input type="email" name="email" id="email" placeholder="email" required>
+            <input class="npt-login" type="email" name="email" id="email" required>
 
             <label for="password">Mot de passe :</label>
-            <input type="password" name="password" id="password" placeholder="mot de passe" required>
+            <input class="npt-login" type="password" name="password" id="password" required>
 
             <label for="confirmPassword">Confirmation du mot de passe :</label>
-            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="confirmation" required>
+            <input class="npt-login" type="password" name="confirmPassword" id="confirmPassword" required>
 
             <button type="submit" name="register">S'inscrire</button>
         </form>

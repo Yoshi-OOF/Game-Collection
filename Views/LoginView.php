@@ -22,9 +22,9 @@
 
         <form method="POST" action="index.php?action=login">
             <label for="email">Email :</label>
-            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input class="npt-login" type="email" id="email" name="email" required>
             <label for="password">Mot de passe :</label>
-            <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+            <input class="npt-login" type="password" id="password" name="password" required>
             <button type="submit">SE CONNECTER</button>
         </form>
 
