@@ -9,10 +9,10 @@ body {
 
 /* Conteneur principal */
 .container {
-    width: 80%;
+    width: 50%;
     margin: 50px auto;
     background-color: #211F2A;
-    padding: 20px;
+    /* padding: 20px; */
     border-radius: 8px;
 }
 
