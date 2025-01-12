@@ -25,9 +25,20 @@ class AjouterJeuModel {
             ':url_couverture' => $url_couverture,
             ':date_sortie' => $date_sortie
         ];
+
+        $this->data->beginTransaction();
+
+        try {
+            $this->data->execute($query, $params);
+            $id_jeu = $this->data->lastInsertId();
+            $this->ajouterCompte($id_jeu, $this->data->getCompteId());
+            $this->data->commit();
+        } catch (Exception $e) {
+            $this->data->rollBack();
+            throw $e;
+        }
     
-        
-        return $this->data->execute($query, $params);
+        return true;
     }
 
     public function ajouterCompte($id_jeu, $id_compte) {
