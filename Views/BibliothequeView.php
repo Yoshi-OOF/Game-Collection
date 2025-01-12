@@ -30,7 +30,7 @@
                 <div class="game-display">
 
                     <?php foreach ($jeux as $jeu): ?>
-                        <a href="index.php?action=modifierJeu">
+                        <a href="index.php?action=modifierJeu&id_jeu=<?php echo $jeu['id_jeu']; ?>">
                             <div class="game-card">
                                 <img src="<?php echo htmlspecialchars($jeu['url_couverture_jeu']); ?>" alt="RDR" height="150px">
 

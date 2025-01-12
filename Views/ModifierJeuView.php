@@ -15,21 +15,29 @@
 
     <main>
 
-        <img src="assets/img/logo.png" alt="IMG DU JEU">
+        <img src="<?php echo $jeu['url_couverture_jeu']; ?>" alt="IMG DU JEU">
 
-        <p><?php echo "Read dead redemption 2"; ?></p>
-        <p><?php echo "jeu trop cool"; ?></p>
+        <p><?php echo $jeu['nom_jeu']; ?></p>
+        <p><?php echo $jeu['desc_jeu']; ?></p>
 
-        <p>Temps passé : <?php echo "60"; ?>h</p>
 
-        <form action="" method="post">
+        <?php if (isset($jeu['temps_jeu'])): ?>
+            <p>Temps passé : <?php echo $jeu['temps_jeu']; ?>h</p>
+        <?php endif; ?>
 
-            <label for="nom">Temps passé sur le jeu</label>
-            <input type="number" min="0" id="temps" placeholder="temps en heure" required>
-            <button type="submit">AJOUTER</button>
+        <form action="index.php?action=modifierJeu&id_jeu=<?php echo $jeu['id_jeu']; ?>" method="POST">
+
+            <label for="temps">Temps passé sur le jeu (en heures) :</label>
+            <input type="number" name="temps" id="temps" min="0" value="<?php echo $jeu['temps_jeu']; ?>">
+
+            <button type="submit">Ajouter</button>
+        </form>
+
+        <form action="index.php?action=modifierJeu&id_jeu=<?php echo $jeu['id_jeu']; ?>" method="POST">
+            <button type="submit">Supprimer</button>
         </form>
     </main>
-    <a href="">Supprimer le jeu de ma bibliothèque</a>
+    
 
     <?php include __DIR__ . '/FooterView.php'; ?>
 

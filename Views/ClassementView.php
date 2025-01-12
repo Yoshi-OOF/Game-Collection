@@ -32,7 +32,11 @@
                     }
                     echo "<tr>";
                     echo "<td>" . htmlspecialchars($row['prenom_compte']) . "</td>";
-                    echo "<td>" . htmlspecialchars($row['temps_jeu']) . "</td>";
+                    if (isset($row['temps_jeu'])) {
+                        echo "<td>" . htmlspecialchars($row['temps_jeu']) . "</td>";
+                    } else {
+                        echo "<td>Non disponible</td>";
+                    }
                     echo "<td>" . htmlspecialchars($row['nom_jeu']) . "</td>";
                     echo "</tr>";
                     $count++;

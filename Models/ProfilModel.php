@@ -15,7 +15,7 @@ class ProfilModel {
             ':prenom' => $post['prenom'],
             ':password' => password_hash($post['password'], PASSWORD_DEFAULT),
             ':mail' => $post['email'],
-            ':id' => $_SESSION['id_compte']['id_compte']
+            ':id' => $_SESSION['compte']['id_compte']
         ];
         $this->data->query($query, $params);
 
@@ -23,7 +23,7 @@ class ProfilModel {
 
     public function delete() {
         $query = "DELETE FROM POSSEDE WHERE id_compte = :id";
-        $params = [':id' => $_SESSION['id_compte']['id_compte']];
+        $params = [':id' => $_SESSION['compte']['id_compte']];
         $this->data->query($query, $params);
 
         $query = "DELETE FROM COMPTE WHERE id_compte = :id";
@@ -42,7 +42,7 @@ class ProfilModel {
 
     public function getInfosCompte() {
         $query = "SELECT * FROM COMPTE WHERE id_compte = :id";
-        $params = [':id' => $_SESSION['id_compte']['id_compte']];
+        $params = [':id' => $_SESSION['compte']['id_compte']];
         return $this->data->query($query, $params)[0];
     }
 
