@@ -14,6 +14,14 @@ class AjouterJeuModel {
         return $this->data->query($query, $params);
     }
 
+    public function rechercherPlatforme($id_jeu) {
+        $query = "SELECT * FROM POSSEDE INNER JOIN PLATFORME ON POSSEDE.id_platforme = PLATFORME.id_platforme 
+        WHERE id_jeu LIKE :id_jeu";
+        $params = [':id_jeu' => $id_jeu];
+    
+        return $this->data->query($query, $params);
+    }
+
     public function ajouterJeu($nom, $desc, $editeur, $url_site, $url_couverture, $date_sortie) {
         $query = "INSERT INTO JEU (nom_jeu, desc_jeu, editeur_jeu, url_site_jeu, url_couverture_jeu, date_sortie_jeu) 
                   VALUES (:nom, :desc, :editeur, :url_site, :url_couverture, :date_sortie)";
