@@ -8,7 +8,7 @@ class ProfilModel {
     }
 
     public function modify($post) {
-        $query = "UPDATE compte SET nom_compte = :nom, prenom_compte = :prenom,
+        $query = "UPDATE COMPTE SET nom_compte = :nom, prenom_compte = :prenom,
         password_compte = :password, email_compte = :mail WHERE id_compte = :id";
         $params = [
             ':nom' => $post['nom'],
