@@ -6,7 +6,7 @@
 }
 
 html {
-    background-color: #1E1B26;
+    background-color: #211F2A;
 }
 
 /* ACCUEIL */
@@ -28,7 +28,7 @@ html {
 }
 
 #my-games {
-    background-color: #1E1B26;
+    background-color: #211F2A;
     padding: 40px 150px 0px 150px;
 }
 
@@ -49,7 +49,7 @@ html {
 }
 
 .device {
-    background-color: #1E1B26;
+    background-color: #211F2A;
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
