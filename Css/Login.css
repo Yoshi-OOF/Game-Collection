@@ -12,9 +12,9 @@ body {
     margin-bottom: 8em;
 
     background: #252836;
-    padding: 30px;
+    padding: 20px 30px;
     border-radius: 10px;
-    min-width: 450px;
+    max-width: 400px;
 }
 
 .login-container h1 {

@@ -23,14 +23,14 @@
         <form method="POST" action="index.php?action=login">
             <label for="email">Email :</label>
             <input class="npt-login" type="email" id="email" name="email" required>
+
             <label for="password">Mot de passe :</label>
             <input class="npt-login" type="password" id="password" name="password" required>
+
             <button type="submit">SE CONNECTER</button>
         </form>
 
-        <div>
-            <a class="register-btn" href="index.php?action=register">S'inscrire</a>
-        </div>
+        <a class="register-btn" href="index.php?action=register">S'inscrire</a>
     </div>
 
     <?php include __DIR__ . '/FooterView.php'; ?>
