@@ -6,6 +6,9 @@ footer {
     bottom: 0;
     /* width: 50%; */
     color: #ffffff;
+    /* centre à 1/2 sur x */
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 footer h3 {
