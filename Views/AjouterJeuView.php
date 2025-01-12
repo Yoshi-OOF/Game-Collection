@@ -14,12 +14,16 @@
     </header>
     <main>
         <h1>Ajouter un jeu à sa bibliothèque</h1>
-        <form action="index.php?action=ajouterJeu" method="post">
-            <input type="hidden" name="action" value="rechercher">
-            <label for="nom">Nom du jeu</label>
-            <input type="text" name="nom" id="nom" value="<?= $_POST['nom'] ?? '' ?>" required>
-            <button type="submit">Rechercher</button>
-        </form>
+        
+        <?php if (!isset($error) || $error != "Le jeu que vous souhaiter ajouter n'exite pas ! Vous pouvez le créer, celui-ci sera automatiquement ajouté à votre bibliothèque !") : ?>
+            <form action="index.php?action=ajouterJeu" method="post">
+                <input type="hidden" name="action" value="rechercher">
+                <label for="nom">Nom du jeu</label>
+                <input type="text" name="nom" id="nom" value="<?= $_POST['nom'] ?? '' ?>" required>
+                <button type="submit">Rechercher</button>
+            </form>
+        <?php endif; ?>
+
         <?php if (isset($error)) : ?>
             <p class="error"><?= $error ?></p>
         <?php endif; ?>
